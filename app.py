@@ -76,8 +76,8 @@ if select == 'Pedestrians':
 elif select == 'Cyclist':
     st.write(original_data.query("injured_cyclists >= 1")[["on_street_name", "injured_cyclists"]].sort_value(by=['injured_cyclists'], ascending=False).dropna(how='any')[:5])
 
-else select == 'Motorists':
-    st.write(original_data.query("injured_motorists >= 1")[["on_street_name", "injured_motorists"]].sort_value(by=['injured_motorists'], ascending=False).dropna(how='any')[:5])
+#else select == 'Motorists':
+    #st.write(original_data.query("injured_motorists >= 1")[["on_street_name", "injured_motorists"]].sort_value(by=['injured_motorists'], ascending=False).dropna(how='any')[:5])
 
 if st.checkbox("Show Raw Data", False):
     st.subheader("Raw Data")
