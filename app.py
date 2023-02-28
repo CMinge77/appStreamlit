@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pydeck as pdk
-import plotly.expres as px
+import plotly.express as px
 
 DATA_URL = (
 "/home/rhyme/Desktop/Project/Motor_Vehicle_Collisions_-_Crashes.csv"
