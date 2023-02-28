@@ -62,7 +62,7 @@ st.subheader("Breakdown by minute between %i:00 and %i:00" %(hour, (hour + 1) %2
 filtered = data[
     (data['date/time'].dt.hour >= hour) & (data['data/time'].dt.hour < (hour + 1))
 ]
-hist = np.histogram(filtered['data/time'].dt.minute, bins = 60, range (0, 60))[0]
+hist = np.histogram(filtered['data/time'].dt.minute, bins = 60, range=(0, 60))[0]
 chart_data = pd.DataFrame({'minute': range (60), 'crashes': hist})
 fig = px.bar(chart_data,  x='minute', y= 'crashes', hover_data=['minute','crashes'], height=400)
 st.write(fig)
